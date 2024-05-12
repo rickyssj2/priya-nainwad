@@ -73,10 +73,10 @@ const skills = [
   // skills can be added or removed
   // if there are no skills, Skills section won't show up
   "SPSS",
-  "Python SciPy",
+  "Python",
   "Chi-Square Testing",
-  "CFA",
-  "AMOS SPSS",
+  "C++"
+  
 ];
 
 const contact = {
