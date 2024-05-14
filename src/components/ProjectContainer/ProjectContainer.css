@@ -1,17 +1,32 @@
 .project {
+  display: flex;
+  flex-direction: column;
   padding: 2em;
   margin: 0 auto;
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
+  border: 1px solid var(--clr-tertiary);
 }
 
 .project:hover {
   transform: translateY(-7px);
+  box-shadow: var(--shadow-hover);
+}
+
+.project__highlight {
+  font-size: smaller;
+  font-weight: bold;
+  margin: auto;
+  color: var(--clr-primary);
+  margin-top: 0.5rem;
+  border: 1px solid var(--clr-primary);
+  padding: 2px 8px;
 }
 
 .project__description {
   margin-top: 1em;
+  flex-grow: 1;
 }
 
 .project__stack {
@@ -26,6 +41,9 @@
   font-weight: 500;
   font-size: 0.8rem;
   color: var(--clr-fg-alt);
+  border: 1px solid var(--clr-fg);
+  border-radius: 5px;
+  padding: 2px 8px;
 }
 
 .project .link--icon {

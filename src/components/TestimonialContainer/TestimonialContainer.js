@@ -4,7 +4,7 @@ import "./TestimonialContainer.css";
 
 const TestimonialContainer = ({ testimonial }) => (
   <div className="testimonial">
-    <FormatQuoteIcon fontSize="large" />
+    <FormatQuoteIcon fontSize="large" sx={{ color: "var(--clr-primary)" }} />
     <p className="testimonial__description merriweather-regular">
       {testimonial.description}
     </p>

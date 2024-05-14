@@ -22,6 +22,7 @@ const projects = [
   {
     name: "Role of Price Perception",
     slug: "role-of-price-perception",
+    highlight: "Presented at International Conference",
     description:
       "This research paper explores the significant role of price perception in consumer behavior. It studies the psychological, sociological, and economic factors that influence how consumers perceive and react to pricing strategies.",
     stack: ["SPSS", "Python SciPy", "Chi-Square Testing"],
@@ -82,17 +83,14 @@ const projects = [
         Chi Square Testing`,
       },
     ],
-    sourceCode: "https://github.com",
-    livePreview: "https://github.com",
   },
   {
     name: "Consumer Perceived Brand Ethicality",
     slug: "consumer-perceived-brand-ethicality",
+
     description:
       "This paper studies the intricate relationship between consumer perception and brand ethicality, emphasizing the significance of aligning with consumer values for trust-building and fostering lasting relationships",
     stack: ["CFA", "AMOS SPSS"],
-    sourceCode: "https://github.com",
-    livePreview: "https://github.com",
   },
 ];
 

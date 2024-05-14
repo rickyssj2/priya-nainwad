@@ -7,7 +7,11 @@ import "./ProjectContainer.css";
 const ProjectContainer = ({ project }) => (
   <Link to={`Projects/${project.slug}`} state={{ project }} className="project">
     <h3>{project.name}</h3>
-
+    {project.highlight && (
+      <p className="project__highlight merriweather-regular">
+        {project.highlight}
+      </p>
+    )}
     <p className="project__description merriweather-regular">
       {project.description}
     </p>

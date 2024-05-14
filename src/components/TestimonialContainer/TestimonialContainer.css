@@ -6,10 +6,12 @@
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
+  border: 1px solid var(--clr-tertiary);
 }
 
 .testimonial:hover {
   transform: translateY(-7px);
+  box-shadow: var(--shadow-hover);
 }
 
 .testimonial__description {

@@ -12,7 +12,10 @@
   --clr-fg-alt: #444;
   /* --clr-primary: #2978b5; */
   --clr-primary: #2978b5;
-  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --clr-tertiary: #b6b6b6;
+  --shadow: rgba(100, 100, 111, 0.2) 0px 2px 5px 0px;
+  --shadow-btn: rgba(100, 100, 111, 0.2) 0px 0px 2px 0px;
+  --shadow-hover: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .dark {
@@ -21,8 +24,10 @@
   --clr-fg: #bdbddd;
   --clr-fg-alt: #cdcdff;
   --clr-primary: #90a0d9;
+  --clr-tertiary: #f3d8ff;
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --shadow-hover: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .merriweather-regular {
@@ -143,12 +148,13 @@ main {
 .btn--plain {
   text-transform: initial;
   background-color: var(--clr-bg-alt);
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-  border: 0;
+  box-shadow: var(--shadow-btn);
+  border: 1px solid var(--clr-tertiary);
 }
 
 .btn--plain:hover {
   transform: translateY(-4px);
+  box-shadow: var(--shadow);
 }
 
 .btn--icon {
