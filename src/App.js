@@ -1,14 +1,12 @@
 import { useContext } from "react";
 import { ThemeContext } from "./contexts/theme";
 import Header from "./components/Header/Header";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
-import Skills from "./components/Skills/Skills";
+import { Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import Testimonials from "./components/Testimonials/Testimonials";
 import "./App.css";
+import Home from "./pages/Home/Home";
+import ProjectDetail from "./pages/ProjectDetail/ProjectDetail";
 
 const App = () => {
   const [{ themeName }] = useContext(ThemeContext);
@@ -16,15 +14,13 @@ const App = () => {
   return (
     <div id="top" className={`${themeName} app`}>
       <Header />
-
-      <main>
-        <About />
-        <Projects />
-        <Skills />
-        <Testimonials />
-        <Contact />
-      </main>
-
+      <Routes>
+        <Route path="/" element={<Home></Home>} />
+        <Route
+          path="Projects/:slug"
+          element={<ProjectDetail></ProjectDetail>}
+        />
+      </Routes>
       <ScrollToTop />
       <Footer />
     </div>

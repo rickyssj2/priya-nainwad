@@ -1,10 +1,11 @@
 import uniqid from "uniqid";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
+import { Link } from "react-router-dom";
 import "./ProjectContainer.css";
 
 const ProjectContainer = ({ project }) => (
-  <div className="project">
+  <Link to={`Projects/${project.slug}`} state={{ project }} className="project">
     <h3>{project.name}</h3>
 
     <p className="project__description merriweather-regular">
@@ -39,7 +40,7 @@ const ProjectContainer = ({ project }) => (
         <LaunchIcon />
       </a>
     )}
-  </div>
+  </Link>
 );
 
 export default ProjectContainer;
