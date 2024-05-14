@@ -53,7 +53,7 @@ const About = () => {
           )}
         </div>
       </Box>
-      <Box sx={{ width: "50%" }}>
+      <Box className="image_box">
         <img className="image" src={protrait} alt="Profile"></img>
       </Box>
     </Box>
