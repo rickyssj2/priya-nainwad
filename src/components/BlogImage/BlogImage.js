@@ -8,7 +8,7 @@ const BlogImage = ({ src }) => {
         width: "100%",
       }}
     >
-      <img src={src} className="blog-img"></img>
+      <img src={src} className="blog-img" alt="blog-image"></img>
     </Box>
   );
 };

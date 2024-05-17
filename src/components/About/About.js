@@ -1,23 +1,14 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import DownloadIcon from "@mui/icons-material/Download";
 import { about } from "../../portfolio";
 import portrait from "../Assets/hero.png";
 import "./About.css";
 import { Box } from "@mui/material";
+import DownloadButton from "../DownloadButton/DownloadButton";
+import pdfFile from "../Assets/resume.pdf";
 
 const About = () => {
   const { name, role, description, resume, social } = about;
-
-  const downloadResume = () => {
-    const pdfUrl = require("../Assets/resume.pdf");
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "priya-nainwad-resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <Box className="about_box">
@@ -25,25 +16,18 @@ const About = () => {
         <h2>Hi 👋🏻, I am</h2>
         {name && <h1 className="about__name">{name}.</h1>}
 
-        {role && <h2 className="about__role">A {role} 👀.</h2>}
+        {role && <h2 className="about__role">A {role} 👩🏻‍🎓.</h2>}
         <p className="about__desc merriweather-regular">
           {description && description}
         </p>
 
         <div className="about__contact center">
           {resume && (
-            <button className="btn btn--outline" onClick={downloadResume}>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                Resume
-                <DownloadIcon></DownloadIcon>
-              </Box>
-            </button>
+            <DownloadButton
+              text="Resume"
+              src={pdfFile}
+              filename="priya-nainwad-resume.pdf"
+            ></DownloadButton>
           )}
 
           {social && (
