@@ -10,7 +10,11 @@ const TestimonialContainer = ({ testimonial }) => (
     </p>
 
     <div className="testimonial_details">
-      <Avatar alt="Remy Sharp" src="" />
+      <Avatar
+        alt={testimonial.name}
+        src={testimonial.img}
+        sx={{ width: 56, height: 56 }}
+      />
       <div className="testimonial_personal_details">
         <h3 className="testimonial_name">{testimonial.name}</h3>
         {testimonial.title && (

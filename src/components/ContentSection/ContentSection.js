@@ -1,6 +1,8 @@
 import { Box, Typography } from "@mui/material";
 
 const ContentSection = ({ section }) => {
+  if (section.content.length > 0) {
+  }
   return (
     <Box
       sx={{

@@ -1,12 +1,23 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import DownloadIcon from "@mui/icons-material/Download";
 import { about } from "../../portfolio";
-import protrait from "../Assets/hero.png";
+import portrait from "../Assets/hero.png";
 import "./About.css";
 import { Box } from "@mui/material";
 
 const About = () => {
   const { name, role, description, resume, social } = about;
+
+  const downloadResume = () => {
+    const pdfUrl = require("../Assets/resume.pdf");
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "priya-nainwad-resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <Box className="about_box">
@@ -21,11 +32,18 @@ const About = () => {
 
         <div className="about__contact center">
           {resume && (
-            <a href={resume}>
-              <span type="button" className="btn btn--outline">
+            <button className="btn btn--outline" onClick={downloadResume}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 Resume
-              </span>
-            </a>
+                <DownloadIcon></DownloadIcon>
+              </Box>
+            </button>
           )}
 
           {social && (
@@ -54,7 +72,7 @@ const About = () => {
         </div>
       </Box>
       <Box className="image_box">
-        <img className="image" src={protrait} alt="Profile"></img>
+        <img className="image" src={portrait} alt="Profile"></img>
       </Box>
     </Box>
   );

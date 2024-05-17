@@ -1,3 +1,6 @@
+import vikasKumar from "./components/Assets/vikas-kumar.jpeg";
+import vilasMore from "./components/Assets/vilas-more.jpeg";
+
 const header = {
   // all the properties are optional - can be left empty or deleted
   homepage: "/",
@@ -11,8 +14,8 @@ const about = {
   description: `Incoming graduate student at UC Riverside studying Business Analytics with interests in Research, Sports and Movies.`,
   resume: "https://example.com",
   social: {
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
+    linkedin: "http://www.linkedin.com/in/priya-nainwad-5485b4210",
+    github: null,
   },
 };
 
@@ -106,6 +109,7 @@ const testimonials = [
       `,
     title: "Professor of Marketing Management",
     designation: "Indian Institue of Management Sirmaur",
+    img: vikasKumar,
   },
   {
     name: "Vilas More",
@@ -117,6 +121,7 @@ results. She reflected a strong foundation in tax matters. Priya was a great add
       `,
     title: "Deputy General Manager",
     designation: "Larsen & Toubro, Mumbai",
+    img: vilasMore,
   },
 ];
 
