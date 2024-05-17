@@ -2,9 +2,7 @@ import "./Footer.css";
 
 const Footer = () => (
   <footer className="footer">
-    <p className="footer__link">
-      Copyright © 2024. All rights and lefts reserved. 👀
-    </p>
+    <p className="footer__link">Created by Priya Nainwad.</p>
   </footer>
 );
 
