@@ -22,10 +22,10 @@ const About = () => {
   return (
     <Box className="about_box">
       <Box sx={{ width: "100%" }} className="about">
-        <h2>Hi, I am</h2>
+        <h2>Hi 👋🏻, I am</h2>
         {name && <h1 className="about__name">{name}.</h1>}
 
-        {role && <h2 className="about__role">A {role}.</h2>}
+        {role && <h2 className="about__role">A {role} 👀.</h2>}
         <p className="about__desc merriweather-regular">
           {description && description}
         </p>

@@ -8,7 +8,7 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="section projects">
-      <h2 className="section__title">Testimonials</h2>
+      <h2 className="section__title">🙇🏻‍♀️ Testimonials</h2>
 
       <div className="testimonials__grid">
         {testimonials.map((testimonial) => (
