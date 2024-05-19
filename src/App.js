@@ -18,12 +18,12 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home></Home>} />
-        <Route path="/projects" element={<ProjectPage></ProjectPage>}></Route>
+        <Route path="/projects" element={<ProjectPage></ProjectPage>} />
         <Route
           path="projects/:slug"
           element={<ProjectDetail></ProjectDetail>}
         />
-        <Route path="/work-experience" element={<Resume></Resume>}></Route>
+        <Route path="/work-experience" element={<Resume></Resume>} />
       </Routes>
       <ScrollToTop />
       <Footer />
