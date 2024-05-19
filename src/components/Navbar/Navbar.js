@@ -6,6 +6,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { ThemeContext } from "../../contexts/theme";
 import { projects, skills } from "../../portfolio";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext);
@@ -20,31 +21,31 @@ const Navbar = () => {
         className="nav__list"
       >
         <li className="nav__list-item">
-          <a href="/" onClick={toggleNavList} className="link link--nav">
+          <Link to="/" onClick={toggleNavList} className="link link--nav">
             Home
-          </a>
+          </Link>
         </li>
         {projects.length ? (
           <li className="nav__list-item">
-            <a
-              href="/projects"
+            <Link
+              to="/projects"
               onClick={toggleNavList}
               className="link link--nav"
             >
               Projects
-            </a>
+            </Link>
           </li>
         ) : null}
 
         {skills.length ? (
           <li className="nav__list-item">
-            <a
-              href="/work-experience"
+            <Link
+              to="/work-experience"
               onClick={toggleNavList}
               className="link link--nav"
             >
               Work Experience
-            </a>
+            </Link>
           </li>
         ) : null}
       </ul>
