@@ -23,7 +23,7 @@ const App = () => {
           path="projects/:slug"
           element={<ProjectDetail></ProjectDetail>}
         />
-        <Route path="/resume" element={<Resume></Resume>}></Route>
+        <Route path="/work-experience" element={<Resume></Resume>}></Route>
       </Routes>
       <ScrollToTop />
       <Footer />

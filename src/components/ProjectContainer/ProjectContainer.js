@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./ProjectContainer.css";
 
 const ProjectContainer = ({ project }) => (
-  <Link to={`${project.slug}`} state={{ project }} className="project">
+  <Link to={`projects/${project.slug}`} state={{ project }} className="project">
     <h3>{project.name}</h3>
     {project.highlight && (
       <p className="project__highlight merriweather-regular">
