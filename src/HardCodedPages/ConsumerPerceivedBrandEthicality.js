@@ -14,8 +14,12 @@ import brandEthicality1 from "../components/Assets/brand-ethicality-1.jpg";
 import BlogImage from "../components/BlogImage/BlogImage";
 import DownloadButton from "../components/DownloadButton/DownloadButton";
 import pdfFile from "../components/Assets/Consumer-Perceived-Brand-Ethicality.pdf";
+import { useEffect } from "react";
 
 const ConsumerPerceivedBrandEthicality = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Breadcrumbs

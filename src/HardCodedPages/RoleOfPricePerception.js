@@ -17,8 +17,13 @@ import chiSquareTest from "../components/Assets/chi-square-test.jpeg";
 import BlogImage from "../components/BlogImage/BlogImage";
 import pdfFile from "../components/Assets/role-of-price-perception.pdf";
 import DownloadButton from "../components/DownloadButton/DownloadButton";
+import { useEffect } from "react";
 
 const RoleOfPricePerception = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Breadcrumbs

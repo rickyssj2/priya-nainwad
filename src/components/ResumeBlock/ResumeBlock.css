@@ -1,0 +1,16 @@
+h4 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.experience-duration {
+  font-family: "Merriweather";
+  font-style: normal;
+  margin-top: 1em;
+}
+
+@media (min-width: 900px) {
+  .experience-duration {
+    margin-top: 0;
+  }
+}

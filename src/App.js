@@ -7,6 +7,8 @@ import Footer from "./components/Footer/Footer";
 import "./App.css";
 import Home from "./pages/Home/Home";
 import ProjectDetail from "./pages/ProjectDetail/ProjectDetail";
+import Resume from "./pages/Resume/Resume";
+import ProjectPage from "./pages/ProjectPage/ProjectPage";
 
 const App = () => {
   const [{ themeName }] = useContext(ThemeContext);
@@ -16,10 +18,12 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home></Home>} />
+        <Route path="/projects" element={<ProjectPage></ProjectPage>}></Route>
         <Route
-          path="Projects/:slug"
+          path="projects/:slug"
           element={<ProjectDetail></ProjectDetail>}
         />
+        <Route path="/resume" element={<Resume></Resume>}></Route>
       </Routes>
       <ScrollToTop />
       <Footer />
