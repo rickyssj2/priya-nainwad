@@ -4,8 +4,12 @@ import LaunchIcon from "@mui/icons-material/Launch";
 import { Link } from "react-router-dom";
 import "./ProjectContainer.css";
 
-const ProjectContainer = ({ project }) => (
-  <Link to={`projects/${project.slug}`} state={{ project }} className="project">
+const ProjectContainer = ({ project, isHome }) => (
+  <Link
+    to={isHome ? `projects/${project.slug}` : `${project.slug}`}
+    state={{ project }}
+    className="project"
+  >
     <h3>{project.name}</h3>
     {project.highlight && (
       <p className="project__highlight merriweather-regular">

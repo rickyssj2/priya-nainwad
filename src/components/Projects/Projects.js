@@ -3,7 +3,7 @@ import { projects } from "../../portfolio";
 import ProjectContainer from "../ProjectContainer/ProjectContainer";
 import "./Projects.css";
 
-const Projects = () => {
+const Projects = ({ isHome }) => {
   if (!projects.length) return null;
 
   return (
@@ -12,7 +12,7 @@ const Projects = () => {
 
       <div className="projects__grid">
         {projects.map((project) => (
-          <ProjectContainer key={uniqid()} project={project} />
+          <ProjectContainer key={uniqid()} project={project} isHome={isHome} />
         ))}
       </div>
     </section>
