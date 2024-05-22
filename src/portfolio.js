@@ -23,7 +23,7 @@ const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
   {
-    name: "Role of Price Perception",
+    name: "Role of Price Perception on Cosumer Behaviour",
     slug: "role-of-price-perception",
     highlight: "Presented at International Conference",
     description:
@@ -102,10 +102,7 @@ const testimonials = [
   // if there are no testimonials, Testimonials section won't show up
   {
     name: "Dr. Vikas Kumar",
-    description: `Priya assisted me in a research paper in collecting well-structured content evident through her ability to articulate ideas coherently with minimal guidance.
-     She helped with documentations and
-      demonstrated good coding skills. She showcased her commitment and keen interest in business
-      research and cognitive learning on consumer behavior.
+    description: `Priya played a crucial role in my research paper by gathering well-structured content and articulating ideas coherently with minimal guidance. She assisted with documentation and demonstrated strong coding skills. Her commitment and keen interest in business research and cognitive learning on consumer behavior were evident throughout the project.
       `,
     title: "Professor of Marketing Management",
     designation: "Indian Institue of Management Sirmaur",

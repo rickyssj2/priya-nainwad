@@ -29,6 +29,9 @@ const ConsumerPerceivedBrandEthicality = () => {
         <Link underline="hover" color="inherit" href="/">
           Home
         </Link>
+        <Link underline="hover" color="inherit" href="/projects">
+          Projects
+        </Link>
         <Typography sx={{ fontSize: "small", color: "var(--clr-fg)" }}>
           Consumer Perceived Brand Ethicality
         </Typography>

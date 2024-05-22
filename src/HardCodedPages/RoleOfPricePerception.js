@@ -37,14 +37,17 @@ const RoleOfPricePerception = () => {
         <Link underline="hover" color="inherit" href="/">
           Home
         </Link>
+        <Link underline="hover" color="inherit" href="/projects">
+          Projects
+        </Link>
         <Typography sx={{ fontSize: "small", color: "var(--clr-fg)" }}>
-          Role Of Price Perception
+          Role Of Price Perception On Consumer Behaviour
         </Typography>
       </Breadcrumbs>
       <Box>
         <Box>
           <h1 className="heading dm-serif-display-regular ">
-            Role Of Price Perception
+            Role Of Price Perception On Consumer Behaviour
           </h1>
           <Box
             sx={{
