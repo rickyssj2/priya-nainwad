@@ -44,7 +44,7 @@
   max-height: 450px;
   transform: scaleX(-1);
   margin: auto;
-  /* border-radius: 35% 50% 30% 50%;  */
+  border-radius: 50%;
 }
 
 @media (max-width: 750px) {

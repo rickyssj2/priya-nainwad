@@ -23,11 +23,11 @@ const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
   {
-    name: "Role of Price Perception on Cosumer Behaviour",
+    name: "Role of Price Perception on Consumer Behaviour",
     slug: "role-of-price-perception",
     highlight: "Presented at International Conference",
     description:
-      "This research paper explores the significant role of price perception in consumer behavior. It studies the psychological, sociological, and economic factors that influence how consumers perceive and react to pricing strategies.",
+      "This research paper explores the significant role of price perception on consumer behavior. It studies the psychological, sociological, and economic factors that influence how consumers perceive and react to pricing strategies.",
     stack: ["SPSS", "Python SciPy", "Chi-Square Testing"],
     content: [
       {

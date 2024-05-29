@@ -1,7 +1,7 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { about } from "../../portfolio";
-import portrait from "../Assets/hero.png";
+import portrait from "../Assets/hero.jpg";
 import "./About.css";
 import { Box } from "@mui/material";
 import DownloadButton from "../DownloadButton/DownloadButton";
