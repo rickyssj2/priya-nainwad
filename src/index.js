@@ -5,14 +5,14 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
-const { REACT_APP_CONTENTFUL_SPACE, REACT_APP_CONTENTFUL_ACCESS_TOKEN } =
-  process.env;
+// const { REACT_APP_CONTENTFUL_SPACE, REACT_APP_CONTENTFUL_ACCESS_TOKEN } =
+//   process.env;
 
 const client = new ApolloClient({
-  uri: `https://graphql.contentful.com/content/v1/spaces/${REACT_APP_CONTENTFUL_SPACE}`,
+  uri: `https://graphql.contentful.com/content/v1/spaces/46999lb7up1c`,
   cache: new InMemoryCache(),
   headers: {
-    Authorization: `Bearer ${REACT_APP_CONTENTFUL_ACCESS_TOKEN}`,
+    Authorization: `Bearer Yysgjpe-8N32HA7f-6uXgvjG6bSrDyN8O_IioUKZmrE`,
   },
 });
 
