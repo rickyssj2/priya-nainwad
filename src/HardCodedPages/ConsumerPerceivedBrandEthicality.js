@@ -1,12 +1,4 @@
-import {
-  Box,
-  Breadcrumbs,
-  Link,
-  List,
-  ListItem,
-  ListItemText,
-  Typography,
-} from "@mui/material";
+import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import "./blog.css";
 import blogHeroImage from "../components/Assets/brand-ethicality.png";
@@ -15,6 +7,7 @@ import BlogImage from "../components/BlogImage/BlogImage";
 import DownloadButton from "../components/DownloadButton/DownloadButton";
 import pdfFile from "../components/Assets/Consumer-Perceived-Brand-Ethicality.pdf";
 import { useEffect } from "react";
+import BreadCrumbs from "../components/BreadCrumbs/BreadCrumbs";
 
 const ConsumerPerceivedBrandEthicality = () => {
   useEffect(() => {
@@ -22,20 +15,7 @@ const ConsumerPerceivedBrandEthicality = () => {
   }, []);
   return (
     <>
-      <Breadcrumbs
-        aria-label="breadcrumb"
-        sx={{ marginTop: "3em", fontSize: "small", color: "var(--clr-fg)" }}
-      >
-        <Link underline="hover" color="inherit" href="/">
-          Home
-        </Link>
-        <Link underline="hover" color="inherit" href="/projects">
-          Projects
-        </Link>
-        <Typography sx={{ fontSize: "small", color: "var(--clr-fg)" }}>
-          Consumer Perceived Brand Ethicality
-        </Typography>
-      </Breadcrumbs>
+      <BreadCrumbs projectTitle="Consumer Perceived Brand Ethicality"></BreadCrumbs>
 
       <Box>
         <Box>

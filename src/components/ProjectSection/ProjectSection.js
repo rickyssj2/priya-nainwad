@@ -1,7 +1,7 @@
 import uniqid from "uniqid";
 import { projects } from "../../portfolio";
 import ProjectContainer from "../ProjectContainer/ProjectContainer";
-import "./Projects.css";
+import "./ProjectSection.css";
 
 const Projects = ({ isHome }) => {
   if (!projects.length) return null;

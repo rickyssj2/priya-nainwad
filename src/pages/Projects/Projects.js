@@ -1,10 +1,10 @@
 import { Container } from "@mui/material";
-import Projects from "../../components/Projects/Projects";
+import ProjectSection from "../../components/ProjectSection/ProjectSection";
 
 const ProjectPage = () => {
   return (
     <Container>
-      <Projects isHome={false}></Projects>
+      <ProjectSection isHome={false}></ProjectSection>
     </Container>
   );
 };

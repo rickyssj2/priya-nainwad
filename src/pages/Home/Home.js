@@ -1,5 +1,5 @@
 import About from "../../components/About/About.js";
-import Projects from "../../components/Projects/Projects.js";
+import Projects from "../../components/ProjectSection/ProjectSection.js";
 import Skills from "../../components/Skills/Skills.js";
 import Testimonials from "../../components/Testimonials/Testimonials.js";
 import Contact from "../../components/Contact/Contact.js";

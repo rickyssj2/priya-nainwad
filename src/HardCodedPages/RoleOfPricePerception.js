@@ -1,13 +1,4 @@
-import {
-  Box,
-  Breadcrumbs,
-  Link,
-  List,
-  ListItem,
-  ListItemText,
-  Typography,
-} from "@mui/material";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
 import "./blog.css";
 import blogHeroImage from "../components/Assets/price-perception.jpg";
 import consumerPreference from "../components/Assets/consumer-preference.jpeg";
@@ -18,6 +9,8 @@ import BlogImage from "../components/BlogImage/BlogImage";
 import pdfFile from "../components/Assets/role-of-price-perception.pdf";
 import DownloadButton from "../components/DownloadButton/DownloadButton";
 import { useEffect } from "react";
+import BreadCrumbs from "../components/BreadCrumbs/BreadCrumbs";
+import BlogTitle from "../components/BlogTitle/BlogTitle";
 
 const RoleOfPricePerception = () => {
   useEffect(() => {
@@ -26,46 +19,13 @@ const RoleOfPricePerception = () => {
 
   return (
     <>
-      <Breadcrumbs
-        aria-label="breadcrumb"
-        sx={{
-          marginTop: "3em",
-          fontSize: "small",
-          color: "var(--clr-fg)",
-        }}
-      >
-        <Link underline="hover" color="inherit" href="/">
-          Home
-        </Link>
-        <Link underline="hover" color="inherit" href="/projects">
-          Projects
-        </Link>
-        <Typography sx={{ fontSize: "small", color: "var(--clr-fg)" }}>
-          Role Of Price Perception On Consumer Behaviour
-        </Typography>
-      </Breadcrumbs>
+      <BreadCrumbs projectTitle="Role Of Price Perception On Consumer Behaviour"></BreadCrumbs>
       <Box>
+        <BlogTitle
+          title="Role Of Price Perception On Consumer Behaviour"
+          readTime="1"
+        ></BlogTitle>
         <Box>
-          <h1 className="heading dm-serif-display-regular ">
-            Role Of Price Perception On Consumer Behaviour
-          </h1>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <AccessTimeIcon fontSize="small"></AccessTimeIcon>
-            <Typography fontSize="small" marginX="0.5em">
-              1 min read
-            </Typography>
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            marginY: "2rem",
-          }}
-        >
           <Typography variant="body2" component="p" marginTop={1}>
             Have you ever stopped to think about how the price of a product or
             service can influence your decision to buy it? From psychological
