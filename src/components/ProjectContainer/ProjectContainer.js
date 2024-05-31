@@ -10,18 +10,18 @@ const ProjectContainer = ({ project, isHome }) => (
     state={{ project }}
     className="project"
   >
-    <h3>{project.name}</h3>
-    {project.highlight && (
+    <h3>{project.title}</h3>
+    {project.highlightText && (
       <p className="project__highlight merriweather-regular">
-        {project.highlight}
+        {project.highlightText}
       </p>
     )}
     <p className="project__description merriweather-regular">
-      {project.description}
+      {project.shortDescription}
     </p>
-    {project.stack && (
+    {project.techStack && (
       <ul className="project__stack">
-        {project.stack.map((item) => (
+        {project.techStack.map((item) => (
           <li key={uniqid()} className="project__stack-item">
             {item}
           </li>
