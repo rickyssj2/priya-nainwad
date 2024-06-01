@@ -1,11 +1,10 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { about } from "../../portfolio";
-import portrait from "../Assets/hero.jpg";
+import portrait from "../../assets/hero.jpg";
 import "./About.css";
 import { Box, Skeleton } from "@mui/material";
 import DownloadButton from "../DownloadButton/DownloadButton";
-import pdfFile from "../Assets/resume.pdf";
+import pdfFile from "../../assets/resume.pdf";
 import { gql, useQuery } from "@apollo/client";
 
 const ABOUT = gql`
@@ -27,7 +26,17 @@ const About = () => {
 
   if (error) console.log(`Error fetching data: ${error}`);
 
-  const { resume, social } = about;
+  const { resume, social } = {
+    // all the properties are optional - can be left empty or deleted
+    name: "Priya Nainwad",
+    role: "Graduate Student at UCR",
+    description: `Incoming graduate student at UC Riverside studying Business Analytics with interests in Research, Sports and Movies.`,
+    resume: "https://example.com",
+    social: {
+      linkedin: "http://www.linkedin.com/in/priya-nainwad-5485b4210",
+      github: null,
+    },
+  };
 
   return (
     <Box className="about_box">

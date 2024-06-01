@@ -1,8 +1,9 @@
-import { contact } from "../../portfolio";
 import "./Contact.css";
 
 const Contact = () => {
-  if (!contact.email) return null;
+  const contact = {
+    email: "pnain002@urc.edu",
+  };
 
   return (
     <section className="section contact center" id="contact">

@@ -4,7 +4,6 @@ import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { ThemeContext } from "../../contexts/theme";
-import { projects, skills } from "../../portfolio";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
@@ -25,29 +24,26 @@ const Navbar = () => {
             Home
           </Link>
         </li>
-        {projects.length ? (
-          <li className="nav__list-item">
-            <Link
-              to="/projects"
-              onClick={toggleNavList}
-              className="link link--nav"
-            >
-              Projects
-            </Link>
-          </li>
-        ) : null}
 
-        {skills.length ? (
-          <li className="nav__list-item">
-            <Link
-              to="/work-experience"
-              onClick={toggleNavList}
-              className="link link--nav"
-            >
-              Work Experience
-            </Link>
-          </li>
-        ) : null}
+        <li className="nav__list-item">
+          <Link
+            to="/projects"
+            onClick={toggleNavList}
+            className="link link--nav"
+          >
+            Projects
+          </Link>
+        </li>
+
+        <li className="nav__list-item">
+          <Link
+            to="/work-experience"
+            onClick={toggleNavList}
+            className="link link--nav"
+          >
+            Work Experience
+          </Link>
+        </li>
       </ul>
 
       <button

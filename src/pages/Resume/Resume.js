@@ -13,7 +13,7 @@ const Resume = () => {
         <h2>Work Experience</h2>
         <Divider></Divider>
         <ResumeBlock
-          img={require("../../components/Assets/Indian_Institute_of_Management_Sirmaur_Logo.png")}
+          img={require("../../assets/Indian_Institute_of_Management_Sirmaur_Logo.png")}
           alt="IIM Sirmaur Logo"
           instituteName="Indian Institute of Management, Sirmaur"
           position="Reasearch Assistant"
@@ -27,7 +27,7 @@ const Resume = () => {
         ></ResumeBlock>
 
         <ResumeBlock
-          img={require("../../components/Assets/larsen-toubro-logo.webp")}
+          img={require("../../assets/larsen-toubro-logo.webp")}
           alt="Larsen and Toubro Logo"
           instituteName="Larsen and Toubro"
           position="Graduate Commercial Trainee- F&A "
@@ -40,7 +40,7 @@ const Resume = () => {
           ]}
         ></ResumeBlock>
         <ResumeBlock
-          img={require("../../components/Assets/clear-trip-logo.jpg")}
+          img={require("../../assets/clear-trip-logo.jpg")}
           alt="Cleartrip Logo"
           instituteName="Cleartrip"
           position="Finance Intern"
@@ -52,7 +52,7 @@ const Resume = () => {
           ]}
         ></ResumeBlock>
         <ResumeBlock
-          img={require("../../components/Assets/tata-logo.jpg")}
+          img={require("../../assets/tata-logo.jpg")}
           alt="Tata Logo"
           instituteName="TATA Institute of Social Science"
           position="Head Volunteer"
