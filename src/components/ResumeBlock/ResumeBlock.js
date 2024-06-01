@@ -1,6 +1,22 @@
 import { Box, List, ListItem, ListItemText } from "@mui/material";
-import uniqid from "uniqid";
 import "./ResumeBlock.css";
+import { BLOCKS } from "@contentful/rich-text-types";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+
+const options = {
+  renderNode: {
+    [BLOCKS.UL_LIST]: (node, children) => <List>{children}</List>,
+    [BLOCKS.LIST_ITEM]: (node, children) => {
+      return (
+        <ListItem disablePadding sx={{ paddingLeft: "1rem" }}>
+          <ListItemText
+            primary={`● ${children[0].props.children[0]}`}
+          ></ListItemText>
+        </ListItem>
+      );
+    },
+  },
+};
 
 const ResumeBlock = ({
   img,
@@ -65,21 +81,7 @@ const ResumeBlock = ({
             <p>{experienceDurationSubtitle}</p>
           </Box>
         </Box>
-        <List dense="true">
-          {resumePoints.map((resumePoint) => {
-            return (
-              <ListItem
-                sx={{
-                  paddingY: "0",
-                }}
-              >
-                <ListItemText key={uniqid()} className="resume-point">
-                  ● {resumePoint}
-                </ListItemText>
-              </ListItem>
-            );
-          })}
-        </List>
+        <Box>{documentToReactComponents(resumePoints, options)}</Box>
       </Box>
     </Box>
   );
