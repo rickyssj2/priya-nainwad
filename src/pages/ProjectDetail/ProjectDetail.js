@@ -65,7 +65,7 @@ const renderOptions = (links) => {
   };
 };
 
-const ProjectDetailTest = () => {
+const ProjectDetail = () => {
   const params = useParams();
 
   const PROJECT = gql`
@@ -129,13 +129,9 @@ const ProjectDetailTest = () => {
                 </Typography>
               </Box>
             </Box>
-            {loading ? (
-              <span>loading...</span>
-            ) : (
-              documentToReactComponents(
-                data?.projectCollection.items[0].body.json,
-                renderOptions(data?.projectCollection.items[0].body.links)
-              )
+            {documentToReactComponents(
+              data?.projectCollection.items[0].body.json,
+              renderOptions(data?.projectCollection.items[0].body.links)
             )}
           </>
         )}
@@ -144,4 +140,4 @@ const ProjectDetailTest = () => {
   );
 };
 
-export default ProjectDetailTest;
+export default ProjectDetail;
