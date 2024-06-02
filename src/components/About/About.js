@@ -4,39 +4,35 @@ import portrait from "../../assets/hero.jpg";
 import "./About.css";
 import { Box, Skeleton } from "@mui/material";
 import DownloadButton from "../DownloadButton/DownloadButton";
-import pdfFile from "../../assets/resume.pdf";
-import { gql, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
+import { ABOUT } from "./AboutQuery";
 
-const ABOUT = gql`
-  query {
-    about(id: "10mBhNv3iKja7mVrhlqscn") {
-      firstName
-      lastName
-      subHeading
-      shortContent
-      heroImage {
-        url
-      }
+const socialsHelper = (socials) => {
+  const social = {
+    linkedin: null,
+    github: null,
+  };
+  socials.forEach((s) => {
+    if (s.includes("linkedin")) {
+      social.linkedin = s;
     }
-  }
-`;
+    if (s.includes("github")) {
+      social.github = s;
+    }
+  });
+  return social;
+};
 
 const About = () => {
   const { loading, error, data } = useQuery(ABOUT);
+  let socials;
 
-  if (error) console.log(`Error fetching data: ${error}`);
+  if (data) socials = socialsHelper(data.about.socials);
 
-  const { resume, social } = {
-    // all the properties are optional - can be left empty or deleted
-    name: "Priya Nainwad",
-    role: "Graduate Student at UCR",
-    description: `Incoming graduate student at UC Riverside studying Business Analytics with interests in Research, Sports and Movies.`,
-    resume: "https://example.com",
-    social: {
-      linkedin: "http://www.linkedin.com/in/priya-nainwad-5485b4210",
-      github: null,
-    },
-  };
+  if (error) {
+    console.log(`Error fetching data: ${error}`);
+    return <span>Error</span>;
+  }
 
   return (
     <Box className="about_box">
@@ -83,19 +79,19 @@ const About = () => {
         ) : (
           <Box>
             <div className="about__contact center">
-              {resume && (
+              {data.about.resume && (
                 <DownloadButton
-                  text="Resume"
-                  src={pdfFile}
-                  filename="priya-nainwad-resume.pdf"
+                  text={data.about.resume.title}
+                  src={data.about.resume.url}
+                  filename={data.about.resume.fileName}
                 ></DownloadButton>
               )}
 
-              {social && (
+              {data.about.socials && (
                 <>
-                  {social.github && (
+                  {socials.github && (
                     <a
-                      href={social.github}
+                      href={socials.github}
                       aria-label="github"
                       className="link link--icon"
                     >
@@ -103,9 +99,9 @@ const About = () => {
                     </a>
                   )}
 
-                  {social.linkedin && (
+                  {socials.linkedin && (
                     <a
-                      href={social.linkedin}
+                      href={socials.linkedin}
                       aria-label="linkedin"
                       className="link link--icon"
                     >
