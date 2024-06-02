@@ -1,21 +1,9 @@
 import uniqid from "uniqid";
 import ProjectContainer from "../ProjectContainer/ProjectContainer";
 import "./ProjectSection.css";
-import { gql, useQuery } from "@apollo/client";
-
-const PROJECTS = gql`
-  query {
-    projectCollection {
-      items {
-        title
-        shortDescription
-        highlightText
-        techStack
-        slug
-      }
-    }
-  }
-`;
+import { useQuery } from "@apollo/client";
+import { PROJECTS } from "./ProjectsQuery";
+import { Skeleton } from "@mui/material";
 
 const Projects = ({ isHome }) => {
   const { loading, error, data } = useQuery(PROJECTS);
@@ -26,7 +14,10 @@ const Projects = ({ isHome }) => {
     <section id="projects" className="section projects">
       <h2 className="section__title">Projects</h2>
       {loading ? (
-        <span>loading ...</span>
+        <div className="projects__grid">
+          <Skeleton variant="rounded" width="100%" height={350}></Skeleton>
+          <Skeleton variant="rounded" width="100%" height={350}></Skeleton>
+        </div>
       ) : (
         <div className="projects__grid">
           {data?.projectCollection.items.map((project) => (

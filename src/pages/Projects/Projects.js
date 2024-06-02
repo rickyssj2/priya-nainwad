@@ -1,7 +1,7 @@
 import { Container } from "@mui/material";
 import ProjectSection from "../../components/ProjectSection/ProjectSection";
 
-const ProjectPage = () => {
+const Project = () => {
   return (
     <Container>
       <ProjectSection isHome={false}></ProjectSection>
@@ -9,4 +9,4 @@ const ProjectPage = () => {
   );
 };
 
-export default ProjectPage;
+export default Project;
